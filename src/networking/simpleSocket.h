@@ -14,9 +14,14 @@ namespace HDE {
             int connection {}; 
 
         public:
+            // --- Constructor --- 
             SimpleSocket(int domain, int service, int protocall, int port, u_long interface);
+
+            // --- Virtual function ---
             virtual int connect_to_network(int socket, struct sockaddr_in address) = 0;
             void test_connection(int);
+
+            // --- Getter functions --- 
             struct sockaddr_in get_address(); 
             int get_sock();
             int get_connection();
