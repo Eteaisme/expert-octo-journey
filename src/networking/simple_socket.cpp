@@ -1,4 +1,4 @@
-#include "simpleSocket.h" 
+#include "simple_socket.h" 
 #include <cstdio>
 #include <cstdlib>
 #include <netinet/in.h>
@@ -26,7 +26,6 @@ void HDE::SimpleSocket::test_connection(int item_to_test){
         exit(EXIT_FAILURE);
     }
 }
-
 struct sockaddr_in HDE::SimpleSocket::get_address(){
     return address; 
 }
